@@ -1,7 +1,7 @@
 const numero1 = document.getElementById("inputNumero1");
 const numero2 = document.getElementById("inputNumero2");
 const botaoCalcular = document.getElementById("btnCalculos");
-const textoSoma = document.getElementById("pSoma");
+const texto= document.getElementById("pSoma");
 const textoSubtracao = document.getElementById("pSubtracao");
 const textoMultiplicacao = document.getElementById("pMultiplicacao");
 const textoDivisao = document.getElementById("pDivisao");
