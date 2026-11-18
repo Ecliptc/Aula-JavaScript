@@ -1,11 +1,11 @@
 // ETAPA 1: O Servidor envia os dados como TEXTO(String)
 // (o stringify simula o que o servidor faz)
 const jsonDados = JSON.stringify([
-    { 'id': 1, 'nome': 'Notebook Gamer', 'Preço':'R$4500.00'},
-    { 'id': 2, 'nome': 'Mouse Sem Fio', 'Preço':'R$120.00'},
-    { 'id': 3, 'nome': 'Teclado Mecânico', 'Preço':'R$350.00'},
-    { 'id': 4, 'nome': 'Headset Wireless', 'Preço':'R$600.00'},
-    { 'id': 5, 'nome': 'Mousepad Desk Mat', 'Preço':'R$50.00'}
+    { 'id': 1, 'nome': 'Notebook Gamer', 'preco':'R$4500.00', 'status':'Disponivel em estoque'},
+    { 'id': 2, 'nome': 'Mouse Sem Fio', 'preco':'R$120.00', 'status':'Esgotado'},
+    { 'id': 3, 'nome': 'Teclado Mecânico', 'preco':'R$350.00', 'status':'Disponivel em estoque'},
+    { 'id': 4, 'nome': 'Headset Wireless', 'preco':'R$600.00', 'status':'Disponivel em estoque'},
+    { 'id': 5, 'nome': 'Mousepad Desk Mat', 'preco':'R$50.00', 'status':'Esgotado'}
 ])
 
 // ETAPA 2: O Cliente (Navegador) recebe um texto e "desempacota"
@@ -19,7 +19,7 @@ dadosConvertidos.forEach(produto => {
 
     // Usando "Template Literals"
     linha.innerHTML = `<td>${produto.id}</td><td>${produto.nome}
-    </td><td>${produto.preco}</td><td>`;
+    </td><td>${produto.preco}</td><td>${produto.status}</td>`;
 
     corpoTabela.appendChild(linha);
 })
